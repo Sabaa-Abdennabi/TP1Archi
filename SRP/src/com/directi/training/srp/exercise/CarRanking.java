@@ -4,8 +4,9 @@ import java.util.List;
 
 public class CarRanking {
     private List<Car> _cars ;
-    public CarRanking(List<Car> carsDb) {
-        _cars = carsDb;
+    private CarRepository  _carRepository = new CarRepository();
+    public CarRanking() {
+        _cars = _carRepository.getCars();
     }
 
     public Car getBestCar() {
