@@ -1,8 +1,8 @@
-package com.directi.training.isp.exercise;
+package com.directi.training.isp.exercise_refactored;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public class SensingDoor implements IDoor
+public class SensingDoor implements IDoor, ISensingDoor
 {
     private boolean _locked;
     private boolean _opened;
@@ -37,13 +37,6 @@ public class SensingDoor implements IDoor
     {
         _opened = false;
     }
-
-    @Override
-    public void timeOutCallback()
-    {
-        throw new NotImplementedException();
-    }
-
     @Override
     public void proximityCallback()
     {
